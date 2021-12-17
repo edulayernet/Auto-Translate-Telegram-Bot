@@ -1,0 +1,4 @@
+session_name="CeviriBot"
+bot_token="5080072002:AAEl9lI4iMKiNFDBu6_yGgiyVET9TQjCosA"
+api_id=8427761
+api_hash="d45fde91fbb5fa1aaa199e787e4389ad"
