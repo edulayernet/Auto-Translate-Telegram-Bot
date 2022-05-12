@@ -8,7 +8,7 @@ from config import *
 
 # arkadaşlar izliyorsanız, pes etmeyin sonunda bunu da çözdük :DD
 
-app = Client(session_name=session_name, bot_token=bot_token, api_id=api_id, api_hash=api_hash)
+app = Client(name=session_name, bot_token=bot_token, api_id=api_id, api_hash=api_hash)
 
 def translate(text, des, src='auto'):
     translator = Translator()
