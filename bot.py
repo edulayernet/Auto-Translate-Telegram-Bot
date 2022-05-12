@@ -10,12 +10,6 @@ from config import *
 
 app = Client(session_name=session_name, bot_token=bot_token, api_id=api_id, api_hash=api_hash)
 
-'''@app.on_message(filters.group)
-async def config(client, message):
-    admins = json.loads(str(await client.get_chat_members(message.chat.id, filter="administrators")))
-    for user in admins:
-        print(user['user']['id'])'''
-
 def translate(text, des, src='auto'):
     translator = Translator()
     result = translator.translate(text, dest=des, src=src)
@@ -29,7 +23,7 @@ async def tr(client, message):
     print(type(translator.detect(message.text).confidence))
     if type(translator.detect(message.text)) != list and "tr" not in translator.detect(message.text).lang and translator.detect(message.text).confidence >= 0.70 :
 
-      await app.send_message(message.chat.id, text=f"{pattern}",reply_to_message_id=message.message_id)
+      await app.send_message(message.chat.id, text=f"{pattern}",reply_to_message_id=message.id)
 
 
 app.run()
